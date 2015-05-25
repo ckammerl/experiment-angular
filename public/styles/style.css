@@ -1,0 +1,7 @@
+.board td {
+  border: solid black 2px;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
