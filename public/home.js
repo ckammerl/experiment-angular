@@ -1,5 +1,5 @@
-angular.module('sudoku.home', [])
+angular.module('sudoku')
 
 .controller('HomeController', function($scope) {
-  $scope.data = [hi, bye, test];
-})
+  $scope.data = ['hi', 'bye', 'test'];
+});
