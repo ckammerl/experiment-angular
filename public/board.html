@@ -1,15 +1,4 @@
-<div id="container">
-
-
-  <h3>How to play:</h3>
-  <div class="rules">
-    <div>Add a number by clicking into the cell.</div>
-    <div><strong>Simple Rules:</strong> The values in row AND column must be unique!</div>
-    <p>Example:</p>
-    <div>| 1 | 2 | 3 |</div>
-    <div>| 3 | 1 | 2 |</div>
-    <div>| 2 | 3 | 1 |</div>
-  </div>
+<div class="container">
 
   <div>
     <table class="board">
@@ -30,5 +19,10 @@
       </tr>
     </table>
   </div> <!-- board -->
+
+  <br>
+
+  <a ui-sref="board.rules" ng-click="value = !value">Rules</a>
+  <div ui-view></div>
 
 </div> <!-- container -->

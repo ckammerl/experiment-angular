@@ -15,6 +15,11 @@ angular.module('sudoku', ['ui.router'])
       controller: 'BoardController'
     })
 
+    .state('board.rules', {
+      url: '/board-rules',
+      templateUrl: 'rules.html'
+    })
+
     .state('form', {
       url: "/enter-input/:row/:col",
       templateUrl: 'form.html',

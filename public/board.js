@@ -2,9 +2,13 @@ angular.module('sudoku')
 
 .controller('BoardController', function($scope, $state, $stateParams, Board) {
   $scope.board = Board.board;
+
+  $scope.value = false;
+
   $scope.getNewInput = function() {
     return $scope.number;
   };
+
   $scope.update = function($event) {
     var clickedElem = $event.currentTarget;
     var RowAndCol = clickedElem.id.split('');
