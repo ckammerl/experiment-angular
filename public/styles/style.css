@@ -5,3 +5,11 @@
   height: 100px;
   text-align: center;
 }
+
+.notvalid {
+  background-color: red;
+}
+
+.valid {
+  background-color: green;
+}

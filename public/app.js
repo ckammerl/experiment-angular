@@ -7,6 +7,9 @@ angular.module('sudoku', ['ui.router'])
   $stateProvider
     .state('board', {
       url: '/',
+      params: {
+        valid: true
+      },
       templateUrl: 'board.html',
       controller: 'BoardController'
     })

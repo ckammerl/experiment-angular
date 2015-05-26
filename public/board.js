@@ -14,6 +14,15 @@ angular.module('sudoku')
     $state.go('form', {row: clickedRow, col: clickedCol});
   };
 
+  // console.log('stateParams', $stateParams.valid);
+
+  $scope.valid = $stateParams.valid;
+
+  // $scope.isValid = function(row, col) {
+
+
+  // }
+
   $scope.$watch('board', function() {
     console.log('board', $scope.board);
   });

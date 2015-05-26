@@ -5,19 +5,19 @@
   <div>
     <table class="board">
       <tr>
-        <td id="00" ng-click="update($event)">{{ board[0][0] }}</td>
-        <td id="01" ng-click="update($event)">{{ board[0][1] }}</td>
-        <td id="02" ng-click="update($event)">{{ board[0][2] }}</td>
+        <td id="00" ng-click="update($event)" ng-class="valid ? 'valid' : 'notvalid'">{{ board[0][0] }}</td>
+        <td id="01" ng-click="update($event)" ng-class="valid ? 'valid' : 'notvalid'">{{ board[0][1] }}</td>
+        <td id="02" ng-click="update($event)" ng-class="valid ? 'valid' : 'notvalid'">{{ board[0][2] }}</td>
       </tr>
       <tr>
-        <td id="10" ng-click="update($event)">{{ board[1][0] }}</td>
-        <td id="11" ng-click="update($event)">{{ board[1][1] }}</td>
-        <td id="12" ng-click="update($event)">{{ board[1][2] }}</td>
+        <td id="10" ng-click="update($event)" ng-class="valid ? 'valid' : 'notvalid'">{{ board[1][0] }}</td>
+        <td id="11" ng-click="update($event)" ng-class="valid ? 'valid' : 'notvalid'">{{ board[1][1] }}</td>
+        <td id="12" ng-click="update($event)" ng-class="valid ? 'valid' : 'notvalid'">{{ board[1][2] }}</td>
       </tr>
       <tr>
-        <td id="20" ng-click="update($event)">{{ board[2][0] }}</td>
-        <td id="21" ng-click="update($event)">{{ board[2][1] }}</td>
-        <td id="22" ng-click="update($event)">{{ board[2][2] }}</td>
+        <td id="20" ng-click="update($event)" ng-class="valid ? 'valid' : 'notvalid'">{{ board[2][0] }}</td>
+        <td id="21" ng-click="update($event)" ng-class="valid ? 'valid' : 'notvalid'">{{ board[2][1] }}</td>
+        <td id="22" ng-click="update($event)" ng-class="valid ? 'valid' : 'notvalid'">{{ board[2][2] }}</td>
       </tr>
     </table>
   </div> <!-- board -->
