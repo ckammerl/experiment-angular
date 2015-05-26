@@ -1,0 +1,7 @@
+ <form name="form" >
+    <input type="text" ng-model="number" placeholder="Add a number">
+    <button ng-click="getNewInput()">Save Number</button>
+    <br>
+    Form has been modified : {{ form.$dirty }}<br>
+    Form is valid : {{ form.$valid }}
+  </form>

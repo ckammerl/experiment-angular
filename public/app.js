@@ -5,14 +5,16 @@ angular.module('sudoku', ['ui.router'])
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('home', {
+    .state('board', {
       url: '/',
-      templateUrl: 'home.html',
-      controller: 'HomeController'
+      templateUrl: 'board.html',
+      controller: 'BoardController'
     })
 
-    .state('otherRoute', {
-      url: "/other"
+    .state('form', {
+      url: "/enter-input/:row/:col",
+      templateUrl: 'form.html',
+      controller: 'FormController'
     });
 });
 
