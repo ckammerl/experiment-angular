@@ -10,11 +10,6 @@ angular.module('sudoku')
     var RowAndCol = clickedElem.id.split('');
     var clickedRow = Number(RowAndCol[0]);
     var clickedCol = Number(RowAndCol[1]);
-    console.log("row", clickedRow);
-    console.log("col", clickedCol);
-    // console.log(clickedElem.id);
-    // console.log(typeof clickedElem.id); // string
-    // console.log(typeof clickedRow); // number
 
     $state.go('form', {row: clickedRow, col: clickedCol});
   };
