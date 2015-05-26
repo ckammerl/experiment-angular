@@ -5,6 +5,20 @@ angular.module('sudoku')
 
   $scope.showRules = false;
 
+  $scope.validNumber = function() {
+    for  (var i= 0; i < $scope.board.length; i++) {
+      for (var j=0; j <  $scope.board.length; j++) {
+        if ($scope.isValid(i,j) === "notvalid") {
+          return false;
+        }
+      }
+    }
+
+    return true;
+    console.log("winner", $scope.haveWinner);
+
+  };
+
   $scope.getNewInput = function() {
     return $scope.number;
   };
@@ -26,8 +40,11 @@ angular.module('sudoku')
     if ( !valid ) {
       return 'notvalid'
     }
-
+      // Board.validEntryCounter++; // update counter in Board factory
+      // console.log('counter', Board.validEntryCounter );
     return 'valid';
+
+
   };
 
   var getRowValues = function(clickedRowIdx) {
