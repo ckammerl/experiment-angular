@@ -4,12 +4,13 @@
   width: 100px;
   height: 100px;
   text-align: center;
+  color: #FFF;
 }
 
 .notvalid {
-  background-color: red;
+  background-color: #CC0000;
 }
 
 .valid {
-  background-color: green;
+  background-color: #336600;
 }
