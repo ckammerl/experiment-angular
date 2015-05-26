@@ -3,7 +3,7 @@ angular.module('sudoku')
 .controller('BoardController', function($scope, $state, $stateParams, Board) {
   $scope.board = Board.board;
 
-  $scope.value = false;
+  $scope.showRules = false;
 
   $scope.getNewInput = function() {
     return $scope.number;
