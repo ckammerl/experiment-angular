@@ -8,7 +8,8 @@ angular.module('sudoku', ['ui.router'])
     .state('board', {
       url: '/',
       params: {
-        valid: true
+        row: 0,
+        col: 0
       },
       templateUrl: 'board.html',
       controller: 'BoardController'
