@@ -7,4 +7,7 @@ angular.module('sudoku')
     Board.board[row][col] = $scope.number;
     $state.go('board');
   };
+
+  $scope.numberOptions = [1,2,3];
+  $scope.number = 1;
 });
