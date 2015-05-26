@@ -1,5 +1,10 @@
+#container {
+  font-size: 1.5em;
+}
+
 .board td {
   border: solid black 2px;
+
   padding: 10px;
   width: 100px;
   height: 100px;
@@ -13,4 +18,14 @@
 
 .valid {
   background-color: #336600;
+}
+
+.rules {
+  margin: 10px;
+}
+
+form {
+  border: solid black 1px;
+  padding: 10px;
+  width: 400px;
 }

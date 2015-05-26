@@ -1,7 +1,10 @@
- <form name="form">
+<div id="container">
+  <h3>Choose a number between 1 and 3:</h3>
+  <form name="form">
     <select ng-model="number" ng-options="value for value in numberOptions"></select>
     <button ng-click="getNewInput()">Save Number</button>
     <br>
     Form has been modified : {{ form.$dirty }}<br>
     Form is valid : {{ form.$valid }}
   </form>
+</div>
