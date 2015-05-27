@@ -2,27 +2,9 @@ angular.module('sudoku')
 
 .controller('BoardController', function($scope, $state, $stateParams, Board) {
   $scope.board = Board.board;
-
   $scope.showRules = false;
 
-  $scope.validNumber = function() {
-    for  (var i= 0; i < $scope.board.length; i++) {
-      for (var j=0; j <  $scope.board.length; j++) {
-        if ($scope.isValid(i,j) === "notvalid") {
-          return false;
-        }
-      }
-    }
-
-    return true;
-    console.log("winner", $scope.haveWinner);
-
-  };
-
-  $scope.getNewInput = function() {
-    return $scope.number;
-  };
-
+// on click into cell
   $scope.update = function($event) {
     var clickedElem = $event.currentTarget;
     var RowAndCol = clickedElem.id.split('');
@@ -32,19 +14,30 @@ angular.module('sudoku')
     $state.go('form', {row: clickedRow, col: clickedCol});
   };
 
+// allows for toggling of msg to user on board.html
+  $scope.validNumber = function() {
+    for (var i= 0; i < $scope.board.length; i++) {
+      for (var j=0; j <  $scope.board.length; j++) {
+        if ($scope.isValid(i,j) === "notvalid") {
+          console.log('all values', $scope.isValid(i,j));
+          return false;
+        }
+      }
+    }
+    return true;
+  };
+
+// checks row and colum valus of clicked cell to determine if new entered value is valid
   $scope.isValid = function(row, col) {
     var currentRow = getRowValues(row);
     var currentCol = getColValues(col);
-    var valid = isValid(currentRow, currentCol);
+    var valid = checkEntries(currentRow, currentCol);
 
     if ( !valid ) {
       return 'notvalid'
     }
-      // Board.validEntryCounter++; // update counter in Board factory
-      // console.log('counter', Board.validEntryCounter );
+
     return 'valid';
-
-
   };
 
   var getRowValues = function(clickedRowIdx) {
@@ -77,7 +70,7 @@ angular.module('sudoku')
     return colValues;
   };
 
-  var isValid = function(rowValues, colValues) {
+  var checkEntries = function(rowValues, colValues) {
     for (var key in rowValues) {
       if (rowValues[key] === false ) {
         return false;
@@ -92,6 +85,7 @@ angular.module('sudoku')
     return true;
   };
 
+  // helper: log board after every change made to it (from any controller)
   $scope.$watch('board', function() {
     console.log('board', $scope.board);
   });
