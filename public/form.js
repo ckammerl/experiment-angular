@@ -5,14 +5,15 @@ angular.module('sudoku')
   $scope.number = 1;
   $scope.board = Board.board;
 
+  // on submit (form.html) of chosen value
   $scope.getNewInput = function() {
     var row = $stateParams.row;
     var col = $stateParams.col;
 
-    var oldCellValue = $scope.board[row][col];
     // set new value into clicked cell
     $scope.board[row][col] = $scope.number;
 
+    // go back to board controller and pass params
     $state.go('board', {row: row, col: col});
   };
 });
